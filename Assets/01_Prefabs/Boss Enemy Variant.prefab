@@ -13,8 +13,16 @@ PrefabInstance:
       value: Boss Enemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5280161002786673741, guid: 7a5299062d93f204b8fc97113ff50022, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280161002786673741, guid: 7a5299062d93f204b8fc97113ff50022, type: 3}
+      propertyPath: m_Color.g
+      value: 0.22449625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280161002786673741, guid: 7a5299062d93f204b8fc97113ff50022, type: 3}
       propertyPath: m_Color.r
-      value: 0.56523514
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7529988095394415910, guid: 7a5299062d93f204b8fc97113ff50022, type: 3}
       propertyPath: m_LocalScale.x

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
@@ -7,13 +8,18 @@ public class Enemy : MonoBehaviour
     public float speed;
     public int health;
     protected Vector3 direction;
+    private TMP_Text healthLabel;
     
     // ---------- Start() -----------
     void Start()
     {
         // B - A, Enemy - Player, so that the enemy is facing the player
         // Player sitting in the centre, which is Vector3(0,0,0)
-        direction = Vector3.zero - transform.position; 
+        direction = Vector3.zero - transform.position;
+        healthLabel = GetComponentInChildren<TMP_Text>();
+        //healthLabel.text = health.ToString();
+        healthLabel.text = "" + health;
+        
     }
 
     // ----------- Update() -------------
@@ -32,6 +38,7 @@ public class Enemy : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         health += amount;
+        healthLabel.text = "" + health;
         if (health <= 0)
         {
             Destroy(this.gameObject);
