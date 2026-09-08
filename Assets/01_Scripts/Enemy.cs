@@ -8,10 +8,10 @@ public class Enemy : MonoBehaviour
     public float speed;
     public int health;
     protected Vector3 direction;
-    private TMP_Text healthLabel;
+    protected TMP_Text healthLabel;
     
     // ---------- Start() -----------
-    void Start()
+    protected virtual void Start()
     {
         // B - A, Enemy - Player, so that the enemy is facing the player
         // Player sitting in the centre, which is Vector3(0,0,0)

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss Enemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3877908994394981250, guid: 7a5299062d93f204b8fc97113ff50022, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5280161002786673741, guid: 7a5299062d93f204b8fc97113ff50022, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -104,4 +108,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Boss
   speed: 3
   health: 10
-  message: Hello World!
+  message: Click me before I click you!

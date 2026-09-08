@@ -5,6 +5,12 @@ using UnityEngine.UI;
 public class Boss : Enemy
 {
     public string message = "Hello World!";
+
+    protected override void Start()
+    {
+        base.Start();
+        healthLabel.text = message;
+    }
     
     // Polymorphism -- Boss 'overrides' current default 
     public override void Move()
