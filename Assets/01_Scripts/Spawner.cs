@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
         //Invoke("SpawnObject", 1); // spawn after 1 second
         // initial wait time 2 sec followed by spawning every 1 sec
         InvokeRepeating("SpawnObject", spawnInitialDelay, spawnDelay); // run function 'again and again' every 1 sec
-        Invoke("Boss" , 5);
+        //Invoke("Boss" , 5);
     }
 
     public void SpawnObject()

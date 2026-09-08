@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
     public int health;
     private TMP_Text healthLabel; // Aggregation
+    public UnityEvent onGameOver;
     
     // ---------------- Start() --------------- is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
        if (collision.transform.CompareTag("Enemy"))
        {
            health -= collision.gameObject.GetComponent<Enemy>().health; // Association
+           if(health <= 0) onGameOver.Invoke();
            healthLabel.text = "" + health;
            Destroy(collision.gameObject);
        }

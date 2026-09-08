@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
         transform.position += direction.normalized * speed * Time.deltaTime;
     }
     
-    public void ChangeHealth(int amount)
+    public virtual void ChangeHealth(int amount)
     {
         health += amount;
         healthLabel.text = "" + health;
